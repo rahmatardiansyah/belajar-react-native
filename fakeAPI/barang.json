@@ -1,0 +1,16 @@
+{
+  "barang": [
+    {
+      "namaBarang": "Sabda",
+      "category": "Makanan",
+      "stock": "100",
+      "id": 1
+    },
+    {
+      "namaBarang": "masdf",
+      "category": "Makanan",
+      "stock": "100",
+      "id": 2
+    }
+  ]
+}

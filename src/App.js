@@ -8,6 +8,7 @@ import StateDinamis from './pages/StateDinamis';
 import Communication from './pages/Communication';
 import CallAPIVanilla from './pages/CallAPIVanilla';
 import LocalAPI from './pages/LocalAPI';
+import Crud from './pages/Crud';
 
 const App = () => {
   return (
@@ -21,7 +22,8 @@ const App = () => {
         {/* </ScrollView> */}
         {/* <Communication /> */}
         {/* <CallAPIVanilla /> */}
-        <LocalAPI />
+        {/* <LocalAPI /> */}
+        <Crud />
       </ScrollView>
     </View>
   )
