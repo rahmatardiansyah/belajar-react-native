@@ -7,9 +7,11 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "j-start": "json-server --watch ./fakeAPI/db.json --port 3004"
   },
   "dependencies": {
+    "axios": "^0.24.0",
+    "json-server": "^0.17.0",
     "react": "17.0.2",
     "react-devtools": "^4.22.1",
     "react-native": "0.66.4"

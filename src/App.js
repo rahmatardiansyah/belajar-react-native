@@ -6,6 +6,8 @@ import Position from './pages/Position';
 import PropDinamis from './pages/PropDinamis'
 import StateDinamis from './pages/StateDinamis';
 import Communication from './pages/Communication';
+import CallAPIVanilla from './pages/CallAPIVanilla';
+import LocalAPI from './pages/LocalAPI';
 
 const App = () => {
   return (
@@ -17,7 +19,9 @@ const App = () => {
         {/* <PropDinamis /> */}
         {/* <StateDinamis /> */}
         {/* </ScrollView> */}
-        <Communication />
+        {/* <Communication /> */}
+        {/* <CallAPIVanilla /> */}
+        <LocalAPI />
       </ScrollView>
     </View>
   )

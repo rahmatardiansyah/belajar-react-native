@@ -1,5 +1,5 @@
 import React, { useState, Component } from "react";
-import { StyleSheet, Text, View, Image, ScrollView, Button } from "react-native";
+import { StyleSheet, Text, View, Button } from "react-native";
 
 const Counter = () => {
     const [number, setNumber] = useState(0);
