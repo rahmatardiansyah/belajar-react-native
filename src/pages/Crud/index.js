@@ -3,7 +3,6 @@ import { Button, StyleSheet, Text, TextInput, View, TouchableOpacity, Alert } fr
 import Axios from 'axios';
 import { Dropdown } from 'react-native-element-dropdown';
 import FontAwesome from 'react-native-vector-icons/FontAwesome5';
-import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
 
 const data = [
     { label: 'Makanan', value: 'Makanan' },
@@ -16,7 +15,7 @@ const Item = ({namaBarang, category, stock, onPress, onDelete}) => {
             <View style={{flexDirection: "row", borderBottomWidth: 1, paddingVertical: 3}}>
                 <Text style={{width: 145}}>{namaBarang}</Text>
                 <Text style={{width: 112}}>{category}</Text>
-                <Text style={{width: 83}}>{stock}</Text>                    
+                <Text style={{width: 83}}>{stock}</Text>
                 <View style={{flexDirection: "row"}}>
                     <TouchableOpacity onPress={onDelete}>
                         <FontAwesome style={styles.icon} color="black" name="trash" size={15} />
@@ -34,7 +33,7 @@ const Crud = () => {
     const [category, setCategory] = useState("");
     const [stock, setStock] = useState();
     const [button, setButton] = useState("Simpan");
-    const [banyakBarang, setBanyakBarang] = useState([]);
+    const [banyakItem, setBanyakItem] = useState([]);
     const [selectedBarang, setSelectedBarang] = useState({});
 
     useEffect(() => {
@@ -45,7 +44,7 @@ const Crud = () => {
         Axios.get('http://localhost:3004/barang')
         .then(res => {
             console.log('res  get data: ', res);
-            setBanyakBarang(res.data);
+            setBanyakItem(res.data);
         })
     }
 
@@ -63,7 +62,11 @@ const Crud = () => {
         Axios.delete(`http://localhost:3004/barang/${item.id}`)
         .then(res => {
             console.log('res delete: ', res);
+            setNamaBarang("");
+            setCategory("");
+            setStock(0);
             getData();
+            setButton("Simpan");
         })
     }
 
@@ -110,7 +113,7 @@ const Crud = () => {
                 maxHeight={200}
                 labelField="label"
                 valueField="value"
-                placeholder="Select item"
+                placeholder="Pilih Kategori"
                 value={category}
                 onChange={item => {
                 setCategory(item.value);
@@ -130,12 +133,12 @@ const Crud = () => {
             <View style={{justifyContent: "center"}}>
                 <View style={styles.viewContainer}>
                     <Text style={styles.viewItem}>Nama Barang</Text>
-                    <Text style={styles.viewItem}>Category</Text>
+                    <Text style={styles.viewItem}>Kategori</Text>
                     <Text style={styles.viewItem}>Stok</Text>
                     <Text style={styles.viewItem}>Aksi</Text>             
                 </View>
                 <View style={styles.itemContainer}>
-                    {banyakBarang.map(barang => {
+                    {banyakItem.map(barang => {
                         return <Item 
                             key={barang.id} 
                             namaBarang={barang.namaBarang} 

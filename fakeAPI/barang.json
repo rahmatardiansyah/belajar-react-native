@@ -1,28 +1,10 @@
 {
   "barang": [
     {
-      "namaBarang": "Sabda",
-      "category": "Minuman",
-      "stock": "102",
-      "id": 1
-    },
-    {
-      "namaBarang": "bombom",
+      "namaBarang": "rahmat",
       "category": "Makanan",
-      "stock": "900",
-      "id": 2
-    },
-    {
-      "namaBarang": "asdfdaf asdf",
-      "category": "Bahan Pokok",
-      "stock": "1000",
-      "id": 3
-    },
-    {
-      "namaBarang": "asdf asdf asdfas asdf asdf ",
-      "category": "Bahan Pokok",
-      "stock": "1000000",
-      "id": 4
+      "stock": "100",
+      "id": 1
     }
   ]
 }

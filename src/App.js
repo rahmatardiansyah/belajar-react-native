@@ -23,6 +23,7 @@ const App = () => {
         {/* <Communication /> */}
         {/* <CallAPIVanilla /> */}
         {/* <LocalAPI /> */}
+        {/* <Crud /> */}
         <Crud />
       </ScrollView>
     </View>
