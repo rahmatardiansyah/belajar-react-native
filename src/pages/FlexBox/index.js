@@ -86,7 +86,7 @@ const FlexBox = () => {
                 flexDirection:'row',
                 width:400 ,
                 height:400,
-                backgroundColor:'#f2f2f2',
+                backgroundColor:'#000000',
                 alignItems:'flex-end'}}>
 
                 <Text style={{backgroundColor:'#ee5253' ,width:50,height:50}}></Text>
